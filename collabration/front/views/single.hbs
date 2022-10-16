@@ -1,0 +1,23 @@
+{{>header}}
+{{>navbar}}
+  {{#if isFound}}
+  <section class="row">
+    <table class="table table-stripped">
+      <thead>
+        <tr>
+          <th>Acc no.:  {{customerID.id}}</th>
+          <th>name:  {{customerID.name}}</th>
+        </tr>
+        <tr>
+          <th>Remaining Balance:  {{customerID.balance}}</th>
+        </tr>
+      </thead>
+    </table>
+  </section>
+  {{else}}
+  <div class="alert alert-danger">
+    Customer Not Found
+  </div>
+  {{/if}}
+</div>
+{{>footer}}
